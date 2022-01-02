@@ -139,6 +139,7 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -340,7 +341,8 @@ PlayerSettings:
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
-  m_TemplateCustomTags: {}
+  m_TemplateCustomTags:
+    HIDE_FULL_SCREEN_BUTTON: \WebGLTemplates\Better2020\TemplateData\hide-fullscreen-button.png
   mobileMTRendering:
     Android: 1
     iPhone: 1

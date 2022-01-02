@@ -15,10 +15,10 @@ public class ExportPackage : MonoBehaviour
     };
 
     public static string PackagePath => Path.Combine(
-        ScriptBatch.BuildDirectory, Constants.ProjectName + "-Examples-{ScriptBatch.VersionNumber}.unitypackage");
+        ScriptBatch.BuildDirectory, Constants.ProjectName + $"-Examples-{ScriptBatch.VersionNumber}.unitypackage");
 
     public static string ScriptPackagePath => Path.Combine(
-        ScriptBatch.BuildDirectory, Constants.ProjectName + "-{ScriptBatch.VersionNumber}.unitypackage");
+        ScriptBatch.BuildDirectory, Constants.ProjectName + $"-{ScriptBatch.VersionNumber}.unitypackage");
 
     [MenuItem("Build/Package/Export All Packages")]
     public static void ExportAllPackages()
