@@ -4,6 +4,9 @@ using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
 
+/// <summary>
+/// Batched scripts for building the project more easily.
+/// </summary>
 public class ScriptBatch : IPostprocessBuildWithReport, IPreprocessBuildWithReport
 {
     /// <summary>
@@ -26,20 +29,32 @@ public class ScriptBatch : IPostprocessBuildWithReport, IPreprocessBuildWithRepo
     /// </summary>
     public static string AppName => $"{Application.productName}";
 
+    /// <summary>
+    /// Callback order for resolving this script during build.
+    /// </summary>
     public int callbackOrder { get { return 0; } }
 
-    public static string[] GetScenes()
+    /// <summary>
+    /// Gets the list of scenes in the project.
+    /// </summary>
+    /// <returns></returns>
+    public static string[] GameScenes => new []
     {
-        return new string[]
-        {
-            System.IO.Path.Combine(ScriptBatch.AssetDirectory, Constants.ProjectName, "Scenes", "SampleScene.unity")
-        };
-    }
+        System.IO.Path.Combine(ScriptBatch.AssetDirectory, Constants.ProjectName, "Scenes", "SampleScene.unity")
+    };
 
+    /// <summary>
+    /// Called before build is completed.
+    /// </summary>
+    /// <param name="report">Report of the build results and configuration.</param>
     public void OnPreprocessBuild(BuildReport report)
     {
     }
 
+    /// <summary>
+    /// Called upon build completion for any final steps.
+    /// </summary>
+    /// <param name="report">Report of the build results and configuration.</param>
     public void OnPostprocessBuild(BuildReport report)
     {
         if (report.summary.platform == BuildTarget.WebGL)
@@ -54,6 +69,9 @@ public class ScriptBatch : IPostprocessBuildWithReport, IPreprocessBuildWithRepo
         PlayerSettings.WebGL.compressionFormat = WebGLCompressionFormat.Gzip;
     }
 
+    /// <summary>
+    /// Build the WebGL, MacOS, and Windows versions of the project.
+    /// </summary>
     [MenuItem("Build/Demo/Build All")]
     public static void BuildAll()
     {
@@ -63,51 +81,60 @@ public class ScriptBatch : IPostprocessBuildWithReport, IPreprocessBuildWithRepo
         WindowsBuild();
     }
 
+    /// <summary>
+    /// Create a demo build for the WebGL platform.
+    /// </summary>
     [MenuItem("Build/Demo/WebGL Build")]
     public static void WebGLBuild()
     {
         PlayerSettings.SetScriptingBackend(BuildTargetGroup.WebGL, ScriptingImplementation.IL2CPP);
         PlayerSettings.WebGL.template = "PROJECT:Better2020";
 
-        // Get filename.
-        string[] levels = GetScenes();
+        // Get file path of build.
         string appFolder = Path.Combine(
             BuildDirectory,
             $"{Constants.ProjectName}-WebGL-{VersionNumber}",
             Constants.ProjectName);
 
         // Build player.
-        BuildPipeline.BuildPlayer(levels, appFolder, BuildTarget.WebGL, BuildOptions.Development);
+        BuildPipeline.BuildPlayer(GameScenes, appFolder, BuildTarget.WebGL, BuildOptions.Development);
     }
 
+    /// <summary>
+    /// Create a build for the Mac platform with the Mono backend.
+    /// </summary>
     [MenuItem("Build/Demo/MacOS Build")]
     public static void MacOSBuild()
     {
         PlayerSettings.SetScriptingBackend(BuildTargetGroup.Standalone, ScriptingImplementation.Mono2x);
 
-        // Get filename.
+        // Get file path of build.
         string path = Path.Combine(BuildDirectory, $"{Constants.ProjectName}-MacOS-{VersionNumber}");
-        string[] levels = GetScenes();
 
         string appFolder = path + $"/{AppName}.app";
 
         // Build player.
-        BuildPipeline.BuildPlayer(levels, appFolder, BuildTarget.StandaloneOSX, BuildOptions.Development);
+        BuildPipeline.BuildPlayer(GameScenes, appFolder, BuildTarget.StandaloneOSX, BuildOptions.Development);
     }
 
+    /// <summary>
+    /// Create a build for the Linux platform with the IL2CPP backend.
+    /// </summary>
     [MenuItem("Build/Demo/Linux Build")]
     public static void LinuxBuild()
     {
         PlayerSettings.SetScriptingBackend(BuildTargetGroup.Standalone, ScriptingImplementation.IL2CPP);
 
-        // Get filename.
+        // Get file path of build.
         string path = Path.Combine(BuildDirectory, $"{Constants.ProjectName}-Linux-{VersionNumber}");
-        string[] levels = GetScenes();
 
         // Build player.
-        BuildPipeline.BuildPlayer(levels, path + $"/{AppName}.x86_64", BuildTarget.StandaloneLinux64, BuildOptions.Development);
+        BuildPipeline.BuildPlayer(GameScenes, path + $"/{AppName}.x86_64", BuildTarget.StandaloneLinux64, BuildOptions.Development);
     }
 
+    /// <summary>
+    /// Create a build for the windows 64 version with IL2CPP backend.
+    /// </summary>
     [MenuItem("Build/Demo/Windows64 Build")]
     public static void WindowsBuild()
     {
@@ -115,7 +142,7 @@ public class ScriptBatch : IPostprocessBuildWithReport, IPreprocessBuildWithRepo
 
         BuildPlayerOptions options = new BuildPlayerOptions
         {
-            scenes = GetScenes(),
+            scenes = GameScenes,
             locationPathName = Path.Combine(
                 BuildDirectory,
                 $"{Constants.ProjectName}-Win64-{VersionNumber}",
@@ -129,6 +156,9 @@ public class ScriptBatch : IPostprocessBuildWithReport, IPreprocessBuildWithRepo
         BuildPipeline.BuildPlayer(options);
     }
 
+    /// <summary>
+    /// Create an official build for the WebGL Platform.
+    /// </summary>
     [MenuItem("Build/Demo/Official WebGL Build")]
     public static void OfficialBuild_WebGL()
     {
@@ -137,7 +167,7 @@ public class ScriptBatch : IPostprocessBuildWithReport, IPreprocessBuildWithRepo
         PlayerSettings.WebGL.decompressionFallback = true;
         BuildPlayerOptions options = new BuildPlayerOptions
         {
-            scenes = GetScenes(),
+            scenes = GameScenes,
             locationPathName = Path.Combine(BuildDirectory, $"{Constants.ProjectName}-WebGL"),
             target = BuildTarget.WebGL,
         };
@@ -146,18 +176,24 @@ public class ScriptBatch : IPostprocessBuildWithReport, IPreprocessBuildWithRepo
         BuildPipeline.BuildPlayer(options);
     }
 
+    /// <summary>
+    /// Create a test build for the WebGL platform.
+    /// </summary>
     public static void TestBuild_WebGL()
     {
         WebGLBuild();
     }
 
+    /// <summary>
+    /// Create a test build for Windows 64 platform with Mono backend.
+    /// </summary>
     public static void TestBuild_Win64()
     {
         PlayerSettings.SetScriptingBackend(BuildTargetGroup.Standalone, ScriptingImplementation.Mono2x);
 
         BuildPlayerOptions options = new BuildPlayerOptions
         {
-            scenes = GetScenes(),
+            scenes = GameScenes,
             locationPathName = Path.Combine(
                 BuildDirectory,
                 $"{Constants.ProjectName}-Test-Win64-{VersionNumber}",
