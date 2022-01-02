@@ -342,7 +342,7 @@ PlayerSettings:
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
   m_TemplateCustomTags:
-    HIDE_FULL_SCREEN_BUTTON: \WebGLTemplates\Better2020\TemplateData\hide-fullscreen-button.png
+    HIDE_FULL_SCREEN_BUTTON: TemplateData/hide-fullscreen-button.png
   mobileMTRendering:
     Android: 1
     iPhone: 1
