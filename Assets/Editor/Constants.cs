@@ -1,4 +1,3 @@
-
 /// <summary>
 /// Constants for the project
 /// </summary>
