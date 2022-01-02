@@ -38,7 +38,7 @@ public class ScriptBatch : IPostprocessBuildWithReport, IPreprocessBuildWithRepo
     /// Gets the list of scenes in the project.
     /// </summary>
     /// <returns></returns>
-    public static string[] GameScenes => new []
+    public static string[] GameScenes => new[]
     {
         System.IO.Path.Combine(ScriptBatch.AssetDirectory, Constants.ProjectName, "Scenes", "SampleScene.unity")
     };
