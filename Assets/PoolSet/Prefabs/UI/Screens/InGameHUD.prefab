@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorLockMode: 2
-  cursorVisible: 0
+  cursorVisible: 1
 --- !u!114 &1292730286106825495
 MonoBehaviour:
   m_ObjectHideFlags: 0
