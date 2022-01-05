@@ -2,6 +2,52 @@
     "name": "InputSystem",
     "maps": [
         {
+            "name": "Player",
+            "id": "e227ed7b-32b5-4e1f-ab5c-af50df67dbf4",
+            "actions": [
+                {
+                    "name": "Target",
+                    "type": "Value",
+                    "id": "7f3d35f5-9c65-446e-af90-ae7c1cda0d6d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoveBall",
+                    "type": "Value",
+                    "id": "0ffa333b-2d6a-4d3e-a8ec-2ff55c2ed0da",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "def5b724-1201-40c7-9451-e5de7f39f792",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Target",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cb527c70-fc41-43e1-8d00-89275beeeed3",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveBall",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "UI",
             "id": "4699242b-012b-4d60-a82f-7809ec226f9d",
             "actions": [
