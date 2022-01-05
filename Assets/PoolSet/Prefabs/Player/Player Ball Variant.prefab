@@ -45,6 +45,18 @@ MonoBehaviour:
   cursorPosition: {fileID: 7561029506822132194, guid: 9704d9b305e0c3d4f8cc1c53108608aa, type: 3}
   cursorPressed: {fileID: 6044993291170396607, guid: 9704d9b305e0c3d4f8cc1c53108608aa, type: 3}
   movementSpeed: 24
+--- !u!114 &6616735536659727296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520855879870126071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee796d140238f3346ba3b143d2f03ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5177160061902707476
 PrefabInstance:
   m_ObjectHideFlags: 0
