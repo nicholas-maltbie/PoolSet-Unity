@@ -85,10 +85,11 @@ namespace nickmaltbie.PoolSet.Pool
             remaining.Remove(8);
 
             // Shuffle the remaining balls
-            remaining.OrderBy(a => Random.Range(0, 1));
 
             // For each remaining ball, place it at the given position
-            var otherBalls = positions.Zip(remaining, (pos, num) => PlacePoolBall(hexGrid, pos, num));
+            var otherBalls = positions.Zip(
+                remaining.OrderBy(a => Random.Range(0, 100)),
+                (pos, num) => PlacePoolBall(hexGrid, pos, num));
 
             // Add the placed balls ot the list of saved balls
             placedBalls.AddRange(otherBalls);

@@ -15,11 +15,11 @@
                 },
                 {
                     "name": "MoveBall",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "0ffa333b-2d6a-4d3e-a8ec-2ff55c2ed0da",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Hold"
                 }
             ],
             "bindings": [
@@ -36,8 +36,41 @@
                 },
                 {
                     "name": "",
+                    "id": "d8947a03-804f-4249-925e-329872b536f7",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveBall",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9807dab2-4af4-4a29-9704-d16c110cde8b",
+                    "path": "<Mouse>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveBall",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "cb527c70-fc41-43e1-8d00-89275beeeed3",
                     "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveBall",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e97c608e-fc66-442d-935c-a5c739eeed19",
+                    "path": "<Touchscreen>/press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
