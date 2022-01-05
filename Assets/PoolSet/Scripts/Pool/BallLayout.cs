@@ -36,6 +36,23 @@ namespace nickmaltbie.PoolSet.Pool
 
         public void Start()
         {
+            SetupPoolBalls();
+        }
+
+        /// <summary>
+        /// Clear out any previously placed balls and setup the 15 balls on the screen.
+        /// </summary>
+        public void SetupPoolBalls()
+        {
+            // Clear out any previously placed balls.
+            foreach (GameObject poolBall in placedBalls)
+            {
+                GameObject.Destroy(poolBall);
+            }
+
+            // Clear out stale references.
+            placedBalls.Clear();
+
             HexWorldGrid hexGrid = new HexWorldGrid(ballDiameter / 2 + ballBuffer, transform);
 
             // Layout balls in the following format in the hex grid
