@@ -1473,6 +1473,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: d7430d8f-71d9-483c-8731-3fd065fcf16e
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7f3d35f5-9c65-446e-af90-ae7c1cda0d6d
+    m_ActionName: Player/Target[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0ffa333b-2d6a-4d3e-a8ec-2ff55c2ed0da
+    m_ActionName: Player/MoveBall[/Mouse/press]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UI
@@ -1903,6 +1911,10 @@ PrefabInstance:
       propertyPath: m_Size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3740808859933887467, guid: 41ed1f3ea1c87a642aff34e3ef31d741, type: 3}
+      propertyPath: menuController
+      value: 
+      objectReference: {fileID: 8387962290575963714}
     - target: {fileID: 4115343917428215393, guid: 41ed1f3ea1c87a642aff34e3ef31d741, type: 3}
       propertyPath: menuController
       value: 

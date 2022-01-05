@@ -70,6 +70,12 @@ namespace nickmaltbie.PoolSet.UI.Actions
 
         public void Awake()
         {
+            // Load menu controller if not set
+            if (menuController == null)
+            {
+                menuController = GetComponentInParent<MenuController>();
+            }
+
             // Load the default mapping saved to the file
             // Start bindings at 1 as 0 is the composite start and 1 represents the first binding index
             for (int i = 1; i <= rebindingGroups.Length; i++)
