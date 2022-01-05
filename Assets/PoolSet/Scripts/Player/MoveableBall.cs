@@ -39,6 +39,12 @@ namespace nickmaltbie.PoolSet.Player
         {
             this.attachedRigidbody = GetComponent<Rigidbody>();
             this.attachedRigidbody.isKinematic = true;
+
+            // Ensure actions are enabled
+            cursorPressed.action.Enable();
+            cursorPosition.action.Enable();
+            cursorPressed.action.actionMap.Enable();
+            cursorPosition.action.actionMap.Enable();
         }
 
         /// <summary>

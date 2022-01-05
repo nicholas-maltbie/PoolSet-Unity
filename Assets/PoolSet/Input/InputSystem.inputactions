@@ -15,11 +15,11 @@
                 },
                 {
                     "name": "MoveBall",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "0ffa333b-2d6a-4d3e-a8ec-2ff55c2ed0da",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Hold"
                 }
             ],
             "bindings": [
