@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8446500240076052195}
   - component: {fileID: 4795890211778059004}
   - component: {fileID: 486149923664253863}
+  - component: {fileID: -1685347447397063548}
   m_Layer: 5
   m_Name: InGameHUD
   m_TagString: Untagged
@@ -147,6 +148,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: d7430d8f-71d9-483c-8731-3fd065fcf16e
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7f3d35f5-9c65-446e-af90-ae7c1cda0d6d
+    m_ActionName: Player/Position[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0ffa333b-2d6a-4d3e-a8ec-2ff55c2ed0da
+    m_ActionName: Player/Pressed[/Mouse/press]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UI
@@ -176,6 +185,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93a4523ef70bf64b8799d5e38201ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1685347447397063548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6101108449083475876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c20b167b381b3479426daace53d7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledState: 1
 --- !u!1001 &3922050718034654412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -369,6 +391,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7606512916387337484, guid: f78149e5ca179354abdae93741d94089, type: 3}
+      propertyPath: inputActions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606512916387337484, guid: f78149e5ca179354abdae93741d94089, type: 3}
+      propertyPath: inputActions.Array.data[1]
+      value: 
+      objectReference: {fileID: 7561029506822132194, guid: 9704d9b305e0c3d4f8cc1c53108608aa, type: 3}
+    - target: {fileID: 7606512916387337484, guid: f78149e5ca179354abdae93741d94089, type: 3}
+      propertyPath: inputActions.Array.data[2]
+      value: 
+      objectReference: {fileID: 6044993291170396607, guid: 9704d9b305e0c3d4f8cc1c53108608aa, type: 3}
     - target: {fileID: 8981685885685296716, guid: f78149e5ca179354abdae93741d94089, type: 3}
       propertyPath: m_Name
       value: Control Label

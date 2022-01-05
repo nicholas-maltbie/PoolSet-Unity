@@ -416,6 +416,7 @@ GameObject:
   - component: {fileID: 5365354899155551352}
   - component: {fileID: -6424729966196064276}
   - component: {fileID: 3127225395034414389}
+  - component: {fileID: -8507837971294196527}
   m_Layer: 5
   m_Name: InGameMenu
   m_TagString: Untagged
@@ -552,6 +553,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: d7430d8f-71d9-483c-8731-3fd065fcf16e
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7f3d35f5-9c65-446e-af90-ae7c1cda0d6d
+    m_ActionName: Player/Position[/Mouse/position]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UI
@@ -581,6 +586,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93a4523ef70bf64b8799d5e38201ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8507837971294196527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3816567771485690116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c20b167b381b3479426daace53d7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetState: 1
 --- !u!1 &4874382769312172081
 GameObject:
   m_ObjectHideFlags: 0
