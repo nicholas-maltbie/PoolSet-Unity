@@ -385,6 +385,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9195334384663461526, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -429,13 +433,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4107459804567933845, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3521724652114923318, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1381051798580771519, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -900840116002235059, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -814908605159416903, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -262184767476964287, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -34856574171240801, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 9c3f1511e52b61c4dabdf781ac77caeb, type: 2}
+    - target: {fileID: 10505992670680718, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
       propertyPath: m_Name
       value: Pool-Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335974472933569856, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145901786237449757, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717198220253673915, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9033699c655875b4a856b2b8be2dac9e, type: 3}

@@ -2,11 +2,14 @@
 
 Example pool set project made using Unity 3D. 
 
-[![Example of moving cue ball around the table hitting other balls on the table](Showcase/pool-table-sample.gif)](https://nickmaltbie.com/PoolSet-Unity)
+[![Example of moving cue ball around the table hitting other balls on the table](Showcase/pool-table-sample.gif)](https://youtu.be/2nHh9vzTW_Y)
 
 You can checkout the demo at [https://nickmaltbie.com/PoolSet-Unity](https://nickmaltbie.com/PoolSet-Unity). This is a
 free and open source project, check the releases for this project if you want to use the source code or assets in your
 other work or download the local version for windows.
+
+Here is a YouTube video explaining how the the billiards table in blender and imported it into Unity
+[https://youtu.be/2nHh9vzTW_Y](https://youtu.be/2nHh9vzTW_Y). 
 
 This project contains a shader definition for every kind of pool ball in a standard game of 8 ball and a standard sized
 8' pool table. The assets for the project are mostly located within the folder `Assets\PoolSet`. This pool table is made
