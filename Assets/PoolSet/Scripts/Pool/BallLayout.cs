@@ -106,8 +106,10 @@ namespace nickmaltbie.PoolSet.Pool
         {
             Vector3 worldPos = hexGrid.GetWorldPosition(pos);
             Quaternion worldRot = hexGrid.GetWorldRotation(pos);
+            Quaternion randomRot = Random.rotation;
+            Quaternion targetRot = Quaternion.Lerp(worldRot, randomRot, 0.5f);
 
-            return GameObject.Instantiate(this.ballLibrary.GetBallPrefab(num), worldPos, worldRot, transform);
+            return GameObject.Instantiate(this.ballLibrary.GetBallPrefab(num), worldPos, targetRot, transform);
         }
     }
 }
